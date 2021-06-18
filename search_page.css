@@ -1,0 +1,101 @@
+.container
+{
+
+	display: inline flex;
+	flex-direction: row;
+}
+.col img
+{
+	width:100%;
+}
+.col p
+{
+	text-align: center;
+}
+h1{
+	color:white;
+}
+#numofresults{
+	color: white;
+}
+.imageCon:hover img
+{
+	opacity: 0.1;
+	transition: all 500ms;
+
+}
+
+.imageCon
+{
+	padding: 40px;
+	position: relative;
+	overflow: hidden;
+	display:block;
+}
+/* .imageCon p{
+	margin: 0 4px;
+} */
+
+.rating
+{
+	position: absolute;
+	text-align: center;
+	top:10px;
+	left:0;
+	bottom:0;
+	right:0;
+	color: white;
+	font-size: 15px;
+	/*font-size: 10px;*/
+}
+.numofVotes
+{
+	position: absolute;
+	text-align: center;
+	top:30px;
+	left:0;
+	bottom:0;
+	right:0;
+	color: white;
+	font-size: 15px;
+	/*font-size: 10px;*/
+}
+.description
+{
+	position: absolute;
+	text-align: center;
+	top:60px;
+	left:0;
+	bottom:0;
+	right:0;
+	color: white;
+	font-size: 15px;
+	
+}
+.imageCon p
+{
+	visibility: hidden;
+}
+.imageCon:hover p
+{
+	visibility: visible;
+}
+.resultsRow
+{
+	font-size: 18px;
+	margin-left: 16px;
+}
+.title
+{
+	font-size: 15px;
+	color: white;
+}
+.release
+{
+	font-size: 15px;
+	color: white;
+}
+
+body {
+	background-color: #ca3e47 !important;
+}
