@@ -1,26 +1,20 @@
 let endpoint = "https://api.themoviedb.org/3/movie/now_playing?api_key=3bbd4cf0ad46eb7a176bc6174fe9abf7&language=pt-BR";
 		let xhr= new XMLHttpRequest();
-		//.open(method-get or post?, endpoint)
 		xhr.open("GET", endpoint);
 		xhr.send();
-		// Wait until we get some kind of response comes back form iTunes
 		xhr.onreadystatechange=function()
 		{
 			console.log(this);
 
-			// When iTunes gives us some kind of response, this code will get run
 			if (xhr.readyState==this.DONE)
 			{
 				if(xhr.status==200)
 				{
-					//Siccessfully recieved a response
 					console.log(xhr.responseText);
-					// console.log(JSON.parse(xhr.responseText))
 					displayResults(xhr.responseText);
 				}
 				else
 				{
-					//There was some error
 					alert("AJAX error!");
 					console.log(xhr.status)
 				}
@@ -33,18 +27,11 @@ let endpoint = "https://api.themoviedb.org/3/movie/now_playing?api_key=3bbd4cf0a
 	
 function displayResults(resultObject)
 {
-
-	//convert JSON into JS objects
 	resultObject= JSON.parse(resultObject);
-	console.log(resultObject);
+	console.log(resultObject.results);
 
-	// Create a bunch of HTML elements so we can show the results on the browser in a nicely formatted way
+	let conElement=document.querySelector("#movie-container");	
 
-	let conElement=document.querySelector("#movie-container");
-	//let conImagae=document.querySelector(".imageCon");
-	
-
-	//clear previous results
 	while(conElement.hasChildNodes())
 	{
 		conElement.removeChild(conElement.lastChild);
@@ -53,7 +40,6 @@ function displayResults(resultObject)
 	document.querySelector("#numofresults").innerHTML= "Mostrando " + resultObject.results.length + " de " + resultObject.total_results+ " resultado(s)!";
 
 
-	//Run through the results and create a <tr> element for each result
 	for(let i=0; i<resultObject.results.length; i++)
 	{
 
@@ -128,53 +114,49 @@ function displayResults(resultObject)
 } 
 
 document.querySelector("#search-form").onsubmit=function(event)
-	{
-		event.preventDefault();
+{
+	event.preventDefault();
 
-		let searchInput = document.querySelector("#search-id").value.trim();
-		if(searchInput=="")
-		{
-			alert("Escreva o nome de um Filme.")
-		}
-		else
-		{
-			console.log(searchInput);
+	let searchInput = document.querySelector("#search-id").value.trim();
+	if(searchInput=="")
+	{
+		alert("Escreva o nome de um Filme.")
+	}
+	else
+	{
+		console.log(searchInput);
+
+			
+		let endpoint = "https://api.themoviedb.org/3/search/movie?api_key=3bbd4cf0ad46eb7a176bc6174fe9abf7&language=pt-BR&query="+ searchInput +"&page=1&include_adult=false"
+			let xhr= new XMLHttpRequest();
+			xhr.open("GET", endpoint);
+			xhr.send();
+		
+			xhr.onreadystatechange=function()
+			{
+				console.log(this);
 
 				
-			let endpoint = "https://api.themoviedb.org/3/search/movie?api_key=3bbd4cf0ad46eb7a176bc6174fe9abf7&language=pt-BR&query="+ searchInput +"&page=1&include_adult=false"
-				let xhr= new XMLHttpRequest();
-				//.open(method-get or post?, endpoint)
-				xhr.open("GET", endpoint);
-				xhr.send();
-			
-				xhr.onreadystatechange=function()
+				if (xhr.readyState==this.DONE)
 				{
-					console.log(this);
-
-					
-					if (xhr.readyState==this.DONE)
+					if(xhr.status==200)
 					{
-						if(xhr.status==200)
-						{
-							//Siccessfully recieved a response
-							console.log(xhr.responseText);
-							// console.log(JSON.parse(xhr.responseText))
-							displayResults(xhr.responseText);
-						}
-						else
-						{
-							//There was some error
-							alert("Procurando algo!");
-							console.log(xhr.status)
-						}
+						console.log(xhr.responseText);
+						displayResults(xhr.responseText);
 					}
-
+					else
+					{
+						alert("Procurando algo!");
+						console.log(xhr.status)
+					}
 				}
 
-				console.log("Final do onsubmit");
+			}
 
-		}
-
-		
+			console.log("Final do onsubmit");
 
 	}
+
+	
+
+}

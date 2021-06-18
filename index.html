@@ -15,6 +15,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="estilos.css" />
+    <link rel="stylesheet" href="search_page.css"/>
 
     <script
       src="https://kit.fontawesome.com/5efd0e313d.js"
@@ -310,7 +311,7 @@
                       Em destaque
                     </h1>
 
-                    <div
+                    <!-- <div
                       class="col-12 col-sm-12 col-md-6 col-lg 6 dropdown botao"
                     >
                       <button
@@ -331,34 +332,67 @@
                         <a class="dropdown-item" href="#">Romance</a>
                         <a class="dropdown-item" href="#">Comédia</a>
                       </div>
-                    </div>
+                    </div> -->
                   </section>
 
                   <section class="row card_area">
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
-                      <img src="imagens/poster_1917.jpg" />
-                    </div>
-
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
-                      <img src="imagens/poster_joker.jpg" />
-                    </div>
-
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
-                      <img src="imagens/poster_toystory4.jpg" />
-                    </div>
-
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
-                      <img src="imagens/poster_whiplash.jpg" />
+                    <div class="container-fluid">
+                      <div class= "row" id="movie-container">
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                          <!-- //first column -->
+                          <a class="imageCon" id="link_id1" href="" target="_blank" rel = "noreferrer noopener">
+                            <img class = "img" src="/imagens/poster_toystory4.jpg" alt="poster" id="img1">
+                            
+                            <p class="rating1 rating"></p>
+                            <p class="description1 description"></p>
+                          </a>
+                          <br>
+                          <p class="title1 title_destaque"></p>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                          <!-- //second column -->
+                          <a class="imageCon" id="link_id2" href="" target="_blank" rel = "noreferrer noopener">
+                            <img class = "img" src="/imagens/poster_1917.jpg" alt="poster" id="img2">
+                            
+                            <p class="rating2 rating"></p>
+                            <p class="description2 description"></p>	
+                          </a>
+                          <br>
+                          <p class="title2 title_destaque"></p>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                          <!-- //third column -->
+                          <a class="imageCon" id="link_id3" href="" target="_blank" rel = "noreferrer noopener">
+                            <img class = "img" src="/imagens/poster_joker.jpg" alt="poster" id="img3">
+                            
+                            <p class="rating3 rating"></p>
+                            <p class="description3 description"></p>
+                          </a>
+                          <br>
+                          <p class="title3 title_destaque"></p>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                          <!-- //fourth column -->
+                          <a class="imageCon" id="link_id4" href="" target="_blank" rel = "noreferrer noopener">
+                            <img class = "img" src="/imagens/poster_whiplash.jpg" alt="poster" id="img4">
+                            
+                            <p class="rating4 rating"></p>
+                            <p class="description4 description"></p>
+                          </a>
+                          <br>
+                          <p class="title4 title_destaque"></p>
+                        </div>
+                      </div>
                     </div>
                   </section>
 
-                  <section class="row">
+                  <!-- <section class="row">
                     <div class="col-12">
-                      <button type="button" class="btn btn-secondary">
+                      <button type="button" class="btn btn-secondary" id="search-form">
                         + Carregar mais filmes
                       </button>
                     </div>
-                  </section>
+                  </section> -->
                 </div>
               </section>
             </div>
@@ -384,11 +418,7 @@
                     <strong class="nome">Vinicius G.</strong>
                     <br />
                     <div class="row">
-                      <strong>Avaliação:</strong>Lorem ipsum dolor sit amet
-                      consectetur adipisicing elit. Minima in facere inventore
-                      quidem consequatur? Praesentium ab esse fugiat dolorum
-                      eaque nisi voluptates in consectetur voluptatibus. Cum
-                      eveniet nisi reprehenderit fuga.
+                      <strong>Avaliação:</strong>Bom filme, trilha sonora muito boa e ambientação, figurinos e fotografia como sempre espetaculares (padrão Disney de qualidade). ... O roteiro não é aquele espetáculo, porém dá um literalmente um show na trilha sonora e no figurino (praticamente um Diabo veste Prada na versão Cruella).
                     </div>
                     <div class="row">
                       <div class="col-6">
@@ -411,11 +441,7 @@
                     <strong class="nome">Carla S.</strong>
                     <br />
                     <div class="row">
-                      <strong>Avaliação:</strong>Lorem ipsum dolor sit amet
-                      consectetur adipisicing elit. Minima in facere inventore
-                      quidem consequatur? Praesentium ab esse fugiat dolorum
-                      eaque nisi voluptates in consectetur voluptatibus. Cum
-                      eveniet nisi reprehenderit fuga.
+                      <strong>Avaliação:</strong>De forma geral, Invocação do Mal 3 é uma adição satisfatória na franquia. Apesar de inicialmente tentar replicar a fórmula narrativa de James Wan, a história encontra fôlego para apostar em direções inéditas, entregar novos sustos e entreter com bastante competência (e poucas pretensões).
                     </div>
                     <div class="row">
                       <div class="col-6">
@@ -437,11 +463,7 @@
                   <div class="col-10">
                     <strong class="nome">Rafael T.</strong>
                     <div class="row">
-                      <strong>Avaliação:</strong>Lorem ipsum dolor sit amet
-                      consectetur adipisicing elit. Minima in facere inventore
-                      quidem consequatur? Praesentium ab esse fugiat dolorum
-                      eaque nisi voluptates in consectetur voluptatibus. Cum
-                      eveniet nisi reprehenderit fuga.
+                      <strong>Avaliação:</strong>Em suma, Vanquish é uma autêntica perda de tempo, uma vez que possui uma premissa vulgar com uma execução igualmente vulgar, acompanhado por performances que estão níveis abaixo do que já fora demonstrado anteriormente, especialmente em relação a Rose e Freeman..
                     </div>
                     <div class="row">
                       <div class="col-6">
@@ -454,13 +476,13 @@
               </div>
             </div>
           </section>
-          <section class="row">
+          <!-- <section class="row">
             <div class="col-12" style="margin: 15px">
               <button type="button" class="btn btn-secondary">
                 + Carregar mais avaliações
               </button>
             </div>
-          </section>
+          </section> -->
         </div>
 
         <!-- Entrevistas & Making of -->
@@ -565,13 +587,13 @@
                 </div>
               </div>
             </section>
-            <section class="row">
+            <!-- <section class="row">
               <div class="col-12" style="margin: 15px">
                 <button type="button" class="btn btn-secondary">
                   + Carregar mais filmes
                 </button>
               </div>
-            </section>
+            </section> -->
           </div>
         </div>
 
@@ -781,12 +803,7 @@
                 </div>
                 <div class="row">
                   <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. A
-                    saepe explicabo fugiat aliquam deleniti cupiditate. Ut nulla
-                    ea, itaque asperiores dignissimos quaerat animi quos,
-                    blanditiis ullam at magni doloremque. Ducimus blanditiis
-                    dolorum atque, repellendus a cupiditate repudiandae
-                    obcaecati voluptas aliquam.
+                    Esse site é um projeto de um aluno da PUC-Minas, com o intuito de aprender mais sobre HTML, CSS e JavaScript.
                   </p>
                 </div>
               </section>
@@ -900,5 +917,6 @@
       integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
       crossorigin="anonymous"
     ></script>
+    <script src="page.js"></script>
   </body>
 </html>

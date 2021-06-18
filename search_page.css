@@ -15,8 +15,12 @@
 h1{
 	color:white;
 }
+.form-row{
+	justify-content: center;
+}
 #numofresults{
 	color: white;
+	text-align: center;
 }
 .imageCon:hover img
 {
@@ -32,9 +36,7 @@ h1{
 	overflow: hidden;
 	display:block;
 }
-/* .imageCon p{
-	margin: 0 4px;
-} */
+
 
 .rating
 {
